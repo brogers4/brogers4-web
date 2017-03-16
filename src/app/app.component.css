@@ -1,0 +1,12 @@
+.app-icon-button {
+  margin: 0 10px;
+}
+
+.toolbar-title {
+  margin: 0 10px;
+}
+
+#sidenav {
+  min-width: 200px;
+  background-color: gray;
+}

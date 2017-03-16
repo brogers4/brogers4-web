@@ -1,0 +1,84 @@
+@import "~@angular/material/core/theming/theming";
+@import "../themes.scss";
+
+:host {
+  display: flex;
+  height: 100%;
+}
+
+.app-container {
+  // display: flex;
+  // flex-direction: column;
+  flex: 1 0 auto;
+}
+
+.app-icon-button {
+  margin: 0 10px;
+}
+
+.toolbar-title {
+  margin: 0 10px;
+}
+
+:host .nav-toolbar /deep/ .mat-toolbar-layout md-toolbar-row {
+  justify-content: center;
+  flex-direction: column;
+}
+
+:host .nav-toolbar /deep/ .mat-toolbar-layout md-toolbar-row .nav-toolbar-img {
+  border-radius: 4px;
+}
+
+:host .nav-toolbar /deep/ .mat-toolbar-layout md-toolbar-row .nav-toolbar-subtitle {
+  font-size: 10px;
+  font-weight: 400;
+  color: mat-color($app-primary,A100);
+}
+
+.app-sidenav {
+  min-width: 200px;
+  // border-right: 1px solid rgba(0,0,0,0.5);
+
+  .nav-item {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      color: mat-color($app-secondary);
+    }
+    &.active {
+      color: white;
+      background-color: mat-color($app-secondary);
+    }
+  }
+}
+
+.app-toolbar {
+  .ion-social-github {
+    font-size: 36px;
+  }
+}
+
+.app-content {
+  // flex: 1 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.content-placeholder {
+  padding: 20px;
+}
+
+.project-iframe {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  border: none;
+}

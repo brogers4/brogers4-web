@@ -1,0 +1,37 @@
+<md-sidenav-container class="app-container">
+
+  <md-sidenav #sidenav class="app-sidenav" mode="side">
+    <md-toolbar color="primary" class="nav-toolbar">
+      <a href="http://github.com/brogers4"><img src="https://avatars1.githubusercontent.com/u/2893916?v=3&s=48" class="nav-toolbar-img"></a>
+    </md-toolbar>
+    <md-list>
+      <md-list-item class="nav-item" *ngFor="let project of projects; let i = index" (click)="onProjectSelect(i,project.url)" [class.active]="i == selectedProject">
+        {{project.name}}
+      </md-list-item>
+    </md-list>
+  </md-sidenav>
+
+  <div class="app-content">
+    <md-toolbar color="primary" class="app-toolbar">
+      <button md-icon-button class="app-icon-button" *ngIf="showNavButton" (click)="sidenav.toggle()">
+        <md-icon>menu</md-icon>
+      </button>
+      <div class="toolbar-title">
+        Brandon Rogers Portfolio
+      </div>
+      <span class="spacer"></span>
+      <div>
+        <a href="http://github.com/brogers4" class="no-decoration"><i class="icon ion-social-github"></i></a>
+      </div>
+    </md-toolbar>
+
+    <div class="main-content">
+      <div class="content-placeholder" *ngIf="selectedProject == null">
+        Select a project from the menu to see documentation and demos.
+      </div>
+      <iframe [src]="selectedProjectUrl | safe" class="project-iframe" *ngIf="selectedProject != null"></iframe>
+    </div>
+  </div>
+
+
+</md-sidenav-container>
