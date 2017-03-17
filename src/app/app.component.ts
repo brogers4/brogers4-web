@@ -16,8 +16,9 @@ export class AppComponent {
     {name:'br-highchart',url:'https://brogers4.github.io/br-highchart'},
     {name:'br-json-tree',url:'https://brogers4.github.io/br-json-tree'},
     {name:'br-pager',url:'https://brogers4.github.io/br-pager'},
-    {name:'br-zoomable-card',url:'https://brogers4.github.io/br-zoomable-card'}
-  ]
+    {name:'br-zoomable-card',url:'https://brogers4.github.io/br-zoomable-card'},
+    {name:'br-signal-strength',url:'https://brogers4.github.io/br-signal-strength'}
+  ];
 
   selectedProjectUrl = 'about:blank';
   selectedProject = null;
